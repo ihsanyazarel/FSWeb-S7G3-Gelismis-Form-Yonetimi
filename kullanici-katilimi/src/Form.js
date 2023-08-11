@@ -61,32 +61,32 @@ const FormPage = () => {
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor='name'><p>- Adı -</p></Label>
-          <Input id='name' name="name" type='text' onChange={HandleChange} value={form.name} invalid={!!formErrors.name}/>
+          <Input id='name' name="name" type='text' onChange={HandleChange} value={form.name} invalid={!!formErrors.name} data-test-id="isim"/>
           {formErrors.name && <FormFeedback> {formErrors.name} </FormFeedback>}
         </FormGroup>
         <br/>
         <FormGroup>
           <Label htmlFor='surname'><p>- Soyadı -</p></Label>
-          <Input id='surname' name="surname" type='text' onChange={HandleChange} value={form.surname} invalid={!!formErrors.surname}/>
+          <Input id='surname' name="surname" type='text' onChange={HandleChange} value={form.surname} invalid={!!formErrors.surname} data-test-id="soyisim"/>
           {formErrors.surname && <FormFeedback> {formErrors.surname} </FormFeedback>}
         </FormGroup>
         <br/>
         <FormGroup>
           <Label htmlFor='email'><p>- E-mail -</p></Label>
           <Input
-          id='email' name='email' type='email' onChange={HandleChange} value={form.email} invalid={!!formErrors.email}/>
+          id='email' name='email' type='email' onChange={HandleChange} value={form.email} invalid={!!formErrors.email} data-test-id="eposta"/>
           {formErrors.email && <FormFeedback> {formErrors.email} </FormFeedback>}
         </FormGroup>
         <br/>
         <FormGroup>
           <Label htmlFor='password'><p>- Şifre -</p></Label>
-          <Input id='password' name='password' type="password" onChange={HandleChange} value={form.password} invalid={!!formErrors.password}/>
+          <Input id='password' name='password' type="password" onChange={HandleChange} value={form.password} invalid={!!formErrors.password} data-test-id="sifre"/>
           {formErrors.password && <FormFeedback> {formErrors.password} </FormFeedback>}
         </FormGroup>
         <br/>
         <FormGroup>
           <Label htmlFor='check'>Verdiğim Bilgilerin Paylaşılmasını Kabul Ediyorum : </Label>
-          <Input id='check' name='check' type="checkbox" onChange={HandleChange} value={form.check} invalid={!!formErrors.check}/>
+          <Input id='check' name='check' type="checkbox" onChange={HandleChange} value={form.check} invalid={!!formErrors.check} data-test-id="tos"/>
           {formErrors.check && <FormFeedback> {formErrors.check} </FormFeedback>}
         </FormGroup>
         <br/>
